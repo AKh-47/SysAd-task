@@ -1,0 +1,46 @@
+.input {
+  height: 5rem;
+  position: relative;
+  margin: 2.25rem 0;
+  //   transform: translateX(2.2rem);
+
+  &__input {
+    width: 20rem;
+    font-size: 1.25rem;
+    padding: 0.35rem;
+    position: absolute;
+    bottom: 0;
+    // display: none;
+    background-color: inherit;
+    color: #fefefe;
+    border-bottom: 1px solid #fefefe;
+    transition: 0.2s all;
+
+    &::placeholder {
+      color: #fefefe;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      border-bottom: 1px solid #fb8434;
+    }
+  }
+
+  &__label {
+    color: #fefefe;
+    position: absolute;
+    top: 0;
+    left: 0.15rem;
+    font-size: 1.25rem;
+    transition: 0.2s all;
+    transform: translateY(2rem) scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__input:not(:placeholder-shown) + &__label {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}

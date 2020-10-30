@@ -1,0 +1,44 @@
+@import "../../baseStyles/buttons";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__image-container {
+    height: 20rem;
+    width: 20rem;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 2rem;
+    background: url("../../assets/tt.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 21rem;
+      width: 21rem;
+      background: linear-gradient(to top right, #fb8434, #fb6d17);
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    margin-top: 4rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
